@@ -1,0 +1,163 @@
+footer {
+  max-width: 1920px;
+  background-color: white;
+  overflow: hidden;
+  margin-top: 40px;
+  .footer-container {
+    width: 1200px;
+    height: 300px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin: 0 auto;
+    // footer-right-wrapper SECTION ===========================================================>>>>>
+    .footer-right-wrapper {
+      text-align: center;
+      img {
+        margin-left: 33%;
+        cursor: pointer;
+      }
+      .lign-footer {
+        position: relative;
+        width: 222px;
+        height: 150px;
+        border: 2px solid #8dc400;
+        border-bottom: none;
+        margin: -46px 0;
+        border-radius: 35px;
+        .right-square {
+          width: 10px;
+          height: 10px;
+          position: absolute;
+          top: 95%;
+          right: 24px;
+          background-color: #8dc400;
+        }
+        .left-square {
+          width: 10px;
+          height: 10px;
+          position: absolute;
+          top: 95%;
+          left: 24px;
+          background-color: #8dc400;
+        }
+      }
+      .text-right-footer {
+        margin: 57px 0 0 29%;
+        line-height: 22px;
+        h2 {
+          font-size: 16px;
+          font-weight: 900;
+          margin-top: -20px;
+          margin-bottom: 15px;
+          text-align: right;
+        }
+        p {
+          font-size: 14px;
+          text-align: justify;
+          color: $link-color;
+        }
+      }
+    }
+    // digital-currencies SECTION ===========================================================>>>>>
+    .digital-currencies {
+      h3 {
+        font-size: $font-14;
+        color: #292929;
+        line-height: 22px;
+        font-weight: 900;
+        text-align: center;
+        margin-top: 48px;
+      }
+      ul {
+        @include flex-center;
+        flex-direction: column;
+        li {
+          margin-top: 20px;
+          a {
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 19px;
+            transition: all 0.1s ease-in;
+            color: #454545;
+            &:hover{
+              color:$icon-color ;
+            }
+          }
+        }
+      }
+    }
+    // digital-currencies SECTION ===========================================================>>>>>
+    .site-currencies{
+      h4{
+        font-size: $font-14;
+        color: #292929;
+        line-height: 22px;
+        font-weight: 900;
+        text-align: center;
+        margin-top: 48px;
+      }
+      ul {
+        @include flex-center;
+        flex-direction: column;
+        li {
+          margin-top: 20px;
+          a {
+            font-weight: 500;
+            font-size: 12px;
+            transition: all 0.1s ease-in;
+            line-height: 19px;
+            color: #454545;;
+            &:hover{
+              color:$icon-color ;
+            }
+          }
+        }
+      }
+    }
+    // connections-currencies SECTION ===========================================================>>>>>
+    .connections-currencies{
+      p{
+        font-size: $font-14;
+        color: #292929;
+        line-height: 22px;
+        font-weight: 900;
+        text-align: center;
+        margin-top: 48px;
+      }
+      ul {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+         flex-direction: column;
+         margin-right: 60px;
+        li {
+          margin-top: 20px;
+          span{
+            text-align: justify;
+          }
+          img{
+            width: 20px;
+            height: 20px;
+            vertical-align: middle;
+            margin-left: 5px;
+          }
+        }
+      }
+    }
+    .connection-icons{
+      width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    :first-child{
+      width: 34px;
+    }
+    img{
+      cursor: pointer;
+      margin-right: 15px;
+      width: 24px;
+    }
+    }
+  }
+}

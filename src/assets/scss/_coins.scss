@@ -1,0 +1,58 @@
+.coins{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+     column-gap: 8px;
+     grid-column: 1/-1;
+           div{
+             @include box-main;
+            padding: 25px 9px;
+        }
+        .coin-items{
+            height: 130px;
+              display: flex;
+            justify-content: space-between;
+             flex-direction: column;
+
+              .coin-icon{
+                position: relative;
+                display: flex;
+                justify-content: space-between;
+                padding: 0;
+                img{
+                    width: 32px;
+                    height: 32px;
+                    margin-left: 0.4rem;
+                }
+                .name-en-coin{
+                    position: absolute;
+                    top: 26px;
+                    right: 34px;
+                    font-weight: 600;
+                    font-size: 13px;
+                }
+                 .name-fs-coin{
+                    position: absolute;
+                     top: -2px;
+                    right: 37px;
+                 }
+ 
+              }
+             p{
+                text-align: left;
+                color:$link-color;
+                font-size: $font-14;
+                span{
+                    color:$range-color;
+                    font-size: $font-14;
+                }
+             }
+             .coin-perc{
+                padding: 0;
+                margin-top: 12px;
+                 img{
+                    width: 15px;
+                    height: 10px;
+                }
+             }
+        }
+  }

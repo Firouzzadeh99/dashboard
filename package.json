@@ -1,0 +1,12 @@
+{
+  "name": "dashboard",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "sass src/assets/scss/styles.scss src/assets/css/style.min.css --style compressed --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

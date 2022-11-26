@@ -1,0 +1,37 @@
+@mixin box-action {
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 8px;
+    border-radius: 8px;
+    :hover{
+        cursor: pointer;
+    }
+    :active{
+        transform: translate(1px,1px);
+    }
+} 
+@mixin box-main {
+    background-color: white;
+    padding: 6px;
+    border-radius: 24px;
+} 
+ 
+    
+@mixin flex-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ 
+} 
+@mixin cart {
+    position: absolute;
+    width: 120px;
+    height: 138px;
+    opacity: 0.5;
+    border-radius: 10px;
+    transform: rotate(44deg);
+
+}
