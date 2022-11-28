@@ -1,132 +1,174 @@
-.coin-chart{
-     grid-column: 1/4;
-     @include box-main;
-     height: 169px;
+.coin-chart {
+  grid-column: 1/4;
+  @include box-main;
+  height: 169px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: -25px;
+  .chart-circle {
     display: flex;
+    .chart {
+      @include flex-center;
+      width: 150px;
+      height: 150px;
+      .circle-chart-item {
+        position: relative;
+        @include flex-center;
+        flex-direction: column;
+        width: 126px;
+        height: 126px;
+        border-radius: 50%;
+        img {
+          position: absolute;
+        }
+        .circle-percent {
+          font-size: 24px;
+          font-weight: 900;
+        }
+        .circle-coins {
+          font-size: 12px;
+          font-weight: 500;
+          color: $link-color;
+          p{
+            font-size: 12px;
+          }
+        }
+        .blue {
+          top: -1px;
+          right: 1px;
+          transform: rotate(-4deg);
+        }
+        .yellow {
+          top: 42px;
+          right: -3px;
+          transform: rotate(0deg);
+        }
+        .green {
+          top: 107px;
+          right: 18px;
+          transform: rotate(3deg);
+        }
+        .pink {
+          top: 29px;
+          left: -1px;
+          transform: rotate(3deg);
+        }
+        .dartkblue {
+          top: 4px;
+          left: -2px;
+          transform: rotate(-6deg);
+        }
+      }
+    }
+    .coins-chart {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      margin-right: 20px;
+      .colors {
+        width: 100px;
+        display: flex;
+        justify-content: flex-start;
+        margin-top: 0.9rem;
+        font-size: 13px;
+        color: $link-color;
+        :first-child {
+          display: flex;
+          width: 10px;
+          border-radius: 2px;
+          height: 10px;
+          margin-left: 7px;
+        }
+        .green {
+          background-color: $green-color;
+        }
+        .blue {
+          background-color: $blue-color;
+        }
+        .pink {
+          background-color: $pink-color;
+        }
+        .yellow {
+          background-color: $yellow-color;
+        }
+      }
+    }
+  }
+  .chart-manage {
+    width: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 84px;
+    font-size: $font-14;
+    flex-direction: column;
+    height: 100px;
+    font-weight: 600;
+    .chart-price-range {
+      width: 120px;
+      display: flex;
+      justify-content: flex-end;
+      :first-child {
+        color: $title-color;
+        font-size: 12px;
+      }
+      span {
+        margin: 0.9rem 0 0 0.5rem;
+      }
+    }
+  }
+  .chart-handel {
+    display: flex;
+    height: 110px;
+    margin-left: 20px;
     justify-content: space-between;
     align-items: center;
-    margin-top: -25px;
-          .chart-circle{
-            display: flex;
-            .chart{
-                @include flex-center;
-                width: 150px;
-                height: 150px;
-            }
-            .coins-chart{
-                 display: flex;
-                justify-content: center;
-                align-items: center;
-                flex-direction: column;
-                margin-right:20px ;
-                    .colors{
-                        width: 100px;
-                         display: flex;
-                        justify-content: flex-start;
-                          margin-top: 0.9rem;
-                        font-size: 13px;
-                        color:$link-color;
-                         :first-child{
-                            display: flex;
-                             width: 10px;
-                             border-radius: 2px;
-                             height: 10px;
-                             margin-left: 7px;
-                            }
-                            .green{
-                                background-color: $green-color;   
-                        }
-                            .blue{
-                                background-color: $blue-color;   
-                        }
-                            .pink{
-                                background-color: $pink-color;   
-                        }
-                            .yellow{
-                                background-color:$yellow-color;   
-                        }
-
-                    }
- 
-            }
- 
+    flex-direction: column;
+    div {
+      .text-up {
+        margin-right: 8px;
+      }
     }
-         .chart-manage{
-             width: 120px;
-             display: flex;
-             justify-content: center;
-             align-items: center ;
-             margin-right: 84px;
-             font-size: $font-14;
-             flex-direction: column;
-             height: 100px;
-             font-weight: 600;
-              .chart-price-range{
-                width: 120px;
-                display: flex;
-                justify-content: flex-end;
-                :first-child{
-                    color:$title-color;
-                    font-size: 12px;
-                }
-              span{                
-                margin: 0.9rem 0 0 0.5rem;
-            }
+    .chart-handel-item {
+      @include flex-center;
+      gap: 30px;
+      color: red;
+      font-size: 13px;
+      :first-child {
+        color: green;
+      }
+      .up-arrow {
+        @include flex-center;
+        width: 37px;
+        height: 37px;
+        background-color: #f0f0f0;
+        border-radius: 8px;
+        margin-bottom: 10px;
+        i {
+          transform: rotate(180deg);
+          color: green;
+          font-size: 15px;
         }
-
+      }
+      .down-arrow {
+        @include flex-center;
+        width: 37px;
+        height: 37px;
+        margin-bottom: 10px;
+        background-color: #f0f0f0;
+        border-radius: 8px;
+        i {
+          color: red;
+          font-size: 15px;
         }
-        .chart-handel{
-            display: flex;
-            height: 110px;
-            margin-left: 20px;
-            justify-content: space-between;
-            align-items: center;
-            flex-direction: column;
-            div{
-                .text-up{
-                    margin-right: 8px
-                }
-            }
-            .chart-handel-item{
-                @include flex-center;
-                gap:30px;
-                color:red;
-                font-size: 13px;
-                :first-child{
-                    color:green;
-                 }
-                .up-arrow{
-                    @include flex-center;
-                    width: 37px;
-                    height: 37px;
-                    background-color: #F0F0F0;
-                    border-radius: 8px;
-                    margin-bottom: 10px;
-                     i{
-                        transform: rotate(180deg);
-                        color:green;
-                        font-size: 15px;
-                    }
-                    
-                    
-                }
-                .down-arrow{
-                    @include flex-center;
-                    width: 37px;
-                    height: 37px;
-                    margin-bottom: 10px;
-                    background-color: #F0F0F0;
-                    border-radius: 8px;
-                     i{
-                        color:red;
-                        font-size: 15px;
-                     }
-                }
-             }
-             div{
-                a{
-                    color:blue;
-                }
-             }
-        }
+      }
+    }
+    div {
+      a {
+        color: blue;
+      }
+    }
   }
+}
